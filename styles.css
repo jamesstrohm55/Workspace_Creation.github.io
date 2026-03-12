@@ -1,0 +1,128 @@
+/* Background and Font */
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+    background: #0F172A;
+    color: #F8FAFC;
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 3rem 1rem 2rem;
+    background: linear-gradient(180deg, #0F172A, #1E293B);
+    border-bottom: 2px solid #F59E0B;
+}
+
+header h1 {
+    margin: 0 0 1rem 0;
+    font-family: 'Archivo', Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #F8FAFC;
+    letter-spacing: 1px;
+    text-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #94A3B8;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: color 0.25s, border-bottom 0.25s;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: #F59E0B;
+    border-bottom: 2px solid #F59E0B;
+}
+
+/* Main Sections */
+main {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+}
+
+main section {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    background-color: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    border-left: 3px solid #F59E0B;
+    transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+main section:hover {
+    box-shadow: 0 4px 32px rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+main section h2 {
+    margin-top: 0;
+    font-family: 'Archivo', Arial, Helvetica, sans-serif;
+    color: #F59E0B;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+main section h3 {
+    color: #8B5CF6;
+    font-family: 'Archivo', Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+main section p {
+    color: #CBD5E1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1.5rem 1rem;
+    background-color: #020617;
+    color: #64748B;
+    border-top: 1px solid rgba(245, 158, 11, 0.2);
+    letter-spacing: 0.3px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    main section {
+        padding: 1.5rem;
+    }
+}
