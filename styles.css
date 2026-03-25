@@ -27,12 +27,13 @@ header h1 {
     text-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
 }
 
-/* Navigation Menu */
+/* Navigation Menu - Flexbox */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 2rem;
 }
@@ -57,8 +58,11 @@ nav ul li a:hover {
     border-bottom: 2px solid #F59E0B;
 }
 
-/* Main Sections */
+/* Main Content - Flexbox */
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     max-width: 900px;
     margin: 2.5rem auto;
     padding: 0 1rem;
@@ -66,7 +70,6 @@ main {
 
 main section {
     padding: 2rem;
-    margin-bottom: 1.5rem;
     background-color: #1E293B;
     border: 1px solid #334155;
     border-radius: 8px;
@@ -153,6 +156,84 @@ tfoot td {
     padding-top: 1rem;
 }
 
+/* Contact Form - Flexbox */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    font-family: 'Archivo', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #F59E0B;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    color: #F8FAFC;
+    background-color: #0F172A;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    border-color: #64748B;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #F59E0B;
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.2);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    align-self: flex-start;
+    padding: 0.75rem 2rem;
+    font-family: 'Archivo', Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0F172A;
+    background-color: #F59E0B;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #FBBF24;
+}
+
+button[type="submit"]:focus {
+    outline: 2px solid #FBBF24;
+    outline-offset: 2px;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -164,19 +245,97 @@ footer {
     letter-spacing: 0.3px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
+/* Responsive - Phone (min-width: 320px) */
+@media (min-width: 320px) {
     nav ul {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 0.75rem;
     }
 
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 0.75rem;
+    }
+
     main section {
-        padding: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    button[type="submit"] {
+        align-self: stretch;
+    }
+}
+
+/* Responsive - Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    main section {
+        padding: 2rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    button[type="submit"] {
+        align-self: flex-start;
+    }
+}
+
+/* Responsive - Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 900px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
     }
 }
