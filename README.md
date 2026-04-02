@@ -3,6 +3,9 @@
 ## Description
 Welcome to my portfolio repository. This website highlights my projects, technical skills, and work in web development. It includes examples of applications and software projects I've built, along with a brief overview of the technologies I use.
 
+## Screenshot
+![Portfolio homepage](./images/portfolio-homepage.jpg)
+
 ## Installation
 Clone the repository and open it locally:
 
